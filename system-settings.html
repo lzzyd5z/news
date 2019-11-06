@@ -1,42 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>系统设置</title>
     <style>
-    .settings .back{
-        height: 20px;
-        background-color: #e5e2e2;
-    }
-    .settings p a{
-        margin: auto;
-        text-decoration: none;
-        color:black;
-    }
+        .settings .back {
+            height: 20px;
+            background-color: #e5e2e2;
+        }
+        .settings .top a{
+            float: left;
+        }
+        .settings p a {
+            margin: auto;
+            text-decoration: none;
+            color: black;
+        }
+        .settings .top{
+            text-align: center;
+        }
+        .settings  .top img{
+            width: 30px;
+            height: 30px;
+        }
+        .settings .edit img{
+            width: 30px;
+            height: 30px;
+            float: right;
+        }
+        .settings p .night button{
+            float: right;
+            width: 70px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        
     </style>
+
 </head>
+
 <body>
     <div class="settings">
+        <p class="top"><a href="/news/My.html"><img src="/news/img/19.png" alt=""></a> 设置</p>
         <div class="back"></div>
-                <p><a href="">编辑资料</a></p>
-                <hr style="height:1px;border:none;border-top:1px solid #a5a3a3;" />
-                <p> <a href="">账号和隐私设置</a></p>
-                <hr style="height:1px;border:none;border-top:1px solid #a5a3a3;" />
-                <p><a href="">黑名单 </a></p>
-                <div class="back"></div>
-                <p>夜间模式</p>
-                <hr style="height:1px;border:none;border-top:1px solid #a5a3a3;" />
-                <p>字体大小</p>
-                <hr style="height:1px;border:none;border-top:1px solid #a5a3a3;" />
-                <p>非WiFi网络流量</p>
-                <hr style="height:1px;border:none;border-top:1px solid #a5a3a3;" />
-                <p>非WiFi网络播放提醒</p>
-                <hr style="height:1px;border:none;border-top:1px solid #a5a3a3;" />
-                <p>推送通知</p>
-                <hr style="height:1px;border:none;border-top:1px solid #a5a3a3;" />
-                <p>通知栏搜索设置</p>
+        <p class="edit"><a href="/news/Editorial-Material.html">编辑资料<img src="/news/img/20.png" alt=""> </a></p>
+        <hr style="height:1px;border:none;border-top:1px solid #a5a3a3;" />
+        <p class="edit"> <a href="">账号和隐私设置 <img src="/news/img/20.png" alt=""></a></p>
+        <hr style="height:1px;border:none;border-top:1px solid #a5a3a3;" />
+        <p class="edit"><a href="">黑名单<img src="/news/img/20.png" alt=""> </a></p>
+        <div class="back"></div>
+        <p>夜间模式
+            <a href="system-settings2.html" class="night">
+               <button>开启 </button>
+            </a>
+        </p>
+        <hr style="height:1px;border:none;border-top:1px solid #a5a3a3;" />
+        <p>字体大小</p>
+        <hr style="height:1px;border:none;border-top:1px solid #a5a3a3;" />
+        <p>非WiFi网络流量</p>
+        <hr style="height:1px;border:none;border-top:1px solid #a5a3a3;" />
+        <p>非WiFi网络播放提醒</p>
+        <hr style="height:1px;border:none;border-top:1px solid #a5a3a3;" />
+        <p>推送通知</p>
+        <hr style="height:1px;border:none;border-top:1px solid #a5a3a3;" />
+        <p>通知栏搜索设置</p>
+
     </div>
+
+
 </body>
+
 </html>
