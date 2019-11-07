@@ -26,6 +26,11 @@
             width: 30px;
             height: 30px;
         }
+        .settings .edit img{
+            width: 30px;
+            height: 30px;
+            float: right;
+        }
         .cover {
             position: fixed;
             outline: 5000px solid rgba(15, 15, 15, 0.3);
@@ -36,6 +41,7 @@
             height: 30px;
             position: inherit;
             right: 20px;
+            background-color: #a5a3a3
         }
     </style>
  <script>
@@ -71,13 +77,13 @@
 
 <body>
     <div class="settings">
-         <p class="top"><a href="/news/My.html"><img src="/news/img/19.png" alt=""></a> 设置</p>
+        <p class="top"><a href="/news/My.html"><img src="/news/img/19.png" alt=""></a> 设置</p>
         <div class="back"></div>
-        <p><a href="">编辑资料</a></p>
+        <p class="edit"><a href="/news/Editorial-Material.html">编辑资料<img src="/news/img/20.png" alt=""> </a></p>
         <hr style="height:1px;border:none;border-top:1px solid #a5a3a3;" />
-        <p> <a href="">账号和隐私设置</a></p>
+        <p class="edit"> <a href="">账号和隐私设置 <img src="/news/img/20.png" alt=""></a></p>
         <hr style="height:1px;border:none;border-top:1px solid #a5a3a3;" />
-        <p><a href="">黑名单 </a></p>
+        <p class="edit"><a href="/news/blacklist.html">黑名单<img src="/news/img/20.png" alt=""> </a></p>
         <div class="back"></div>
         <p>夜间模式<a href="system-settings.html" class="cover">
             <button >关闭</button></a></p>
