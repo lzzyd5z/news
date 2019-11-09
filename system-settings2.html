@@ -11,9 +11,6 @@
             height: 20px;
             background-color: #e5e2e2;
         }
-        .settings .top a{
-            float: left;
-        }
         .settings p a {
             margin: auto;
             text-decoration: none;
@@ -21,6 +18,9 @@
         }
         .settings .top{
             text-align: center;
+        }
+        .settings .top a{
+            float: left;
         }
         .settings  .top img{
             width: 30px;
@@ -31,15 +31,48 @@
             height: 30px;
             float: right;
         }
-        .settings p .night button{
-            float: right;
+        .cover {
+            position: fixed;
+            outline: 5000px solid rgba(15, 15, 15, 0.3);
+            z-index: 99999;
+        }
+        .settings p .cover button{
             width: 70px;
             height: 30px;
-            margin-right: 10px;
+            position: inherit;
+            right: 20px;
+            background-color: #a5a3a3
         }
-        
     </style>
-
+ <script>
+              var brightness;
+        //显示遮罩
+        function cover(brightness) {
+            if (typeof(div) == 'undefined') {
+                div = document.createElement('div');
+                div.setAttribute('style', 'position:fixed;top:0;left:0;outline:5000px solid;z-index:99999;');
+                document.body.appendChild(div);
+            } else {
+                div.style.display = '';
+            }
+            div.style.outlineColor = 'rgba(0,0,0,' + brightness + ')';
+        }
+        //事件监听
+        window.addEventListener('keydown', function(e) {
+            if (e.altKey && e.keyCode == 90) { //Alt+Z:打开夜间模式
+                cover(brightness = 0.3);
+            }
+            if (e.altKey && e.keyCode == 88) { //Alt+X:关闭
+                cover(brightness = 0);
+            }
+            if (e.altKey && e.keyCode == 38) { //Alt+↑:增加亮度
+                if (brightness - 0.05 > 0.05) cover(brightness -= 0.05);
+            }
+            if (e.altKey && e.keyCode == 40) { //Alt+↓:降低亮度
+                if (brightness + 0.05 < 0.95) cover(brightness += 0.05);
+            }
+        }, false);
+        </script>
 </head>
 
 <body>
@@ -48,15 +81,12 @@
         <div class="back"></div>
         <p class="edit"><a href="/news/Editorial-Material.html">编辑资料<img src="/news/img/20.png" alt=""> </a></p>
         <hr style="height:1px;border:none;border-top:1px solid #a5a3a3;" />
-        <p class="edit" > <a href="">账号和隐私设置 <img src="/news/img/20.png" alt=""></a></p>
+        <p class="edit"> <a href="">账号和隐私设置 <img src="/news/img/20.png" alt=""></a></p>
         <hr style="height:1px;border:none;border-top:1px solid #a5a3a3;" />
         <p class="edit"><a href="/news/blacklist.html">黑名单<img src="/news/img/20.png" alt=""> </a></p>
         <div class="back"></div>
-        <p>夜间模式
-            <a href="system-settings2.html" class="night">
-               <button>开启 </button>
-            </a>
-        </p>
+        <p>夜间模式<a href="system-settings.html" class="cover">
+            <button >关闭</button></a></p>
         <hr style="height:1px;border:none;border-top:1px solid #a5a3a3;" />
         <p>字体大小</p>
         <hr style="height:1px;border:none;border-top:1px solid #a5a3a3;" />
@@ -67,9 +97,7 @@
         <p>推送通知</p>
         <hr style="height:1px;border:none;border-top:1px solid #a5a3a3;" />
         <p>通知栏搜索设置</p>
-
     </div>
-
 
 </body>
 

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>反馈</title>
+    <style>
+    .settings .top a{
+            float: left;
+        }
+        .settings .back {
+            height: 25px;
+            background-color: #e5e2e2;
+            
+        }
+        .settings .back span{
+            font-size: 14px;
+            color: rgb(138, 132, 132);
+        }
+        .settings p a {
+            margin: auto;
+            text-decoration: none;
+            color: black;
+        }
+        .settings .top{
+            text-align: center;
+        }
+        .settings  .top img{
+            width: 30px;
+            height: 30px;
+        }
+        .settings .edit img{
+            width: 30px;
+            height: 30px;
+            float: right;
+        }
+
+        .modal {
+    display: none; /* 默认隐藏 */
+    position: fixed; /* 固定定位 */
+    z-index: 1; /* 设置在顶层 */
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+/* 弹窗内容 */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+}
+
+/* 关闭按钮 */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+        <div class="settings">
+                <p class="top"><a href="My.html"><img src="/news/img/19.png" alt=""></a> 反馈与帮助</p>
+        <div class="back"><span>常见问题</span></div>
+        <div id="myBtn">
+            <p   class="edit">系统卡顿 </p>
+        <hr style="height:1px;border:none;border-top:1px solid #a5a3a3;" />
+        <p   class="edit" >我想发表内容 </p>
+        <hr style="height:1px;border:none;border-top:1px solid #a5a3a3;" />
+        <p  class="edit">不喜欢推荐的文章</p>
+        <hr style="height:1px;border:none;border-top:1px solid #a5a3a3;" />
+        <p   class="edit" >无法修改昵称 </p>
+        <hr style="height:1px;border:none;border-top:1px solid #a5a3a3;" />
+        <p  class="edit">如何提高阅读量</p>
+        </div>
+        
+        <div id="myModal" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <p>反馈成功</p>
+                </div>
+              
+              </div>
+        </div>
+        <script>
+        // 获取弹窗
+var modal = document.getElementById('myModal');
+ 
+ // 打开弹窗的按钮对象
+ var btn = document.getElementById("myBtn");
+  
+ // 获取 <span> 元素，用于关闭弹窗
+ var span = document.querySelector('.close');
+  
+ // 点击按钮打开弹窗
+ btn.onclick = function() {
+     modal.style.display = "block";
+ }
+  
+ // 点击 <span> (x), 关闭弹窗
+ span.onclick = function() {
+     modal.style.display = "none";
+ }
+  
+ // 在用户点击其他地方时，关闭弹窗
+ window.onclick = function(event) {
+     if (event.target == modal) {
+         modal.style.display = "none";
+     }
+ }
+        </script>
+</body>
+</html>
