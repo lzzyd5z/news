@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+     *{  
+            margin: 0px;  
+            padding: 0px;  
+            background: #000;
+        }  
+        video{  
+            position: fixed;  
+            right: 0px;  
+            bottom: 0px;  
+            min-width: 100%;  
+            min-height: 50%;  
+            height: auto;  
+            width: auto;  
+            margin-bottom: 30%;
+        }  
+        source{  
+            min-width: 100%;  
+            min-height: 50%;  
+            height: auto;  
+            width: auto;  
+        }
+        .left{
+            position:absolute;
+            width: 200px;
+            height: 100%;
+        } 
+        .right{
+            position: absolute;;
+            right: 0px;
+            width: 200px;
+            height: 100%;
+            background-color:transparent; 
+        }  
+    </style>
+</head>
+<body>
+        <div class="video">
+                <div ><a href="/news/mp4/05.mp4" class="left"></a></div>
+                    <video  controls autoplay>
+                    <source src="/news/mp4/06.mp4" type="video/mp4">
+                </video>
+                <div ><a href="/news/mp4/07.mp4" class="right"></a></div>
+
+        </div>        
+</body>
+</html>
